@@ -33,7 +33,7 @@ wheel           0.36.2 // Do not sure it's relevant for this POC but it was in m
 A Naive bayes classification algorithm implementation on Awake Data. Using the Gaussian Naive bayes (why? https://www.quora.com/What-is-the-difference-between-the-the-Gaussian-Bernoulli-Multinomial-and-the-regular-Naive-Bayes-algorithms).
 
 ## POC Report (Training model Explanations, Results (score, confusion matrix))
-https://docs.google.com/document/d/1Ips63u-SlEB1M4ZSCyfKwf-1wIwfsGS8VTCKZ1upmmE/edit?usp=sharing
+https://drive.google.com/file/d/1IurIkbacE8-3YIFflD_mF--BTdZxKcI_/view?usp=sharing
 
 ## Authors & Co-authors
 - [Simon Provost](https://github.com/simonprovost)
