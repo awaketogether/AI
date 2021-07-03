@@ -2,11 +2,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns;
-from sklearn.model_selection import learning_curve, ShuffleSplit, GridSearchCV
+from sklearn.model_selection import learning_curve, ShuffleSplit
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import roc_curve, auc
+import sys
 
 sns.set_theme()
 
@@ -81,8 +82,11 @@ def plotValidationModelCurves(estimator, title, X, y, axes=None, ylim=None, cv=N
     axes[2].set_title("Performance of the model")
 
 
-def main():
-    dataset = pd.read_csv("../../../SleepAnalyzer/outputAwakeInformation/sleepLogs.csv")
+def main(argv):
+    if not argv or not argv[0]:
+        raise ValueError("Path to the dataset's needed.")
+
+    dataset = pd.read_csv(argv[0])
     dataset.drop(['Number', 'timestamp', 'count'], axis=1, inplace=True, errors='ignore')
 
     #INPUTS / OUTPUT
@@ -177,4 +181,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
